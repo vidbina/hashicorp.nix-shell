@@ -6,6 +6,7 @@ stdenv.mkDerivation rec {
   version = "0.11.5";
 
   buildInputs = with pkgs; [
+    go_1_9
     (terraform.overrideAttrs (old: rec {
       name = "terraform-${version}";
       src = fetchgit {
