@@ -7,6 +7,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = with pkgs; [
     go_1_9
+    hcloud
     (terraform.overrideAttrs (old: rec {
       name = "terraform-${version}";
       src = fetchgit {
