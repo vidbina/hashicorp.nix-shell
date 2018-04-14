@@ -19,5 +19,15 @@ stdenv.mkDerivation rec {
 
   shellHook = ''
     source .env
+    exitstatus()
+    {
+        if [[ $? == 0 ]]; then
+            echo -e "\e[92m>\e[39m"
+        else
+            echo -e "\e[91m>\e[39m"
+        fi
+    }
+    export PS1='$(exitstatus) '
+    export PS2="> "
   '';
 }
