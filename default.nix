@@ -4,6 +4,7 @@ stdenv.mkDerivation rec {
   name = "hashicorp-env-${version}";
   src = ./.;
   version = "0.1.0";
+
   packer_version = "1.2.2";
   terraform_version = "0.11.5";
 
