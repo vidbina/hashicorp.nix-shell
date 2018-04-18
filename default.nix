@@ -27,6 +27,7 @@ stdenv.mkDerivation rec {
         sha256 = "130ibb1pd60r2cycwpzs8qfwrz6knyc1a1849csxpipg5rs5q3jy";
       };
     }))
+    which
   ];
 
   shellHook = ''
