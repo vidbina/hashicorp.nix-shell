@@ -11,6 +11,7 @@ stdenv.mkDerivation rec {
   buildInputs = with pkgs; [
     go_1_9
     graphviz
+    jq
     (packer.overrideAttrs (old: rec {
       name = "packer-${packer_version}";
       src = fetchgit {
