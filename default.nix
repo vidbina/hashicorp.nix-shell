@@ -19,6 +19,7 @@ stdenv.mkDerivation rec {
         sha256 = "05k3hzp0456f7ygz0k0f2sz6xv32rdb9bg5fkr5s69af84p53d91";
       };
     }))
+    openssh
     (terraform.overrideAttrs (old: rec {
       name = "terraform-${terraform_version}";
       src = fetchgit {
