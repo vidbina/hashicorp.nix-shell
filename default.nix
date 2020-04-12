@@ -38,7 +38,10 @@ stdenv.mkDerivation rec {
     export TERMINFO=/run/current-system/sw/share/terminfo
     real_TERM=$TERM; TERM=xterm; TERM=$real_TERM; unset real_TERM
 
-    source .env
+    export GOPATH=`realpath GOPATH`
+    export PATH=$PATH:$GOPATH/bin
+    source project.env
+
     exitstatus()
     {
         if [[ $? == 0 ]]; then
